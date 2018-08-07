@@ -1,7 +1,7 @@
 # Quiz-chatbot
 Questions in Trivial Pursuit and pub quizzes
 
-The main file is question_ancerer.py. If you run that then you will have the program. The way it works is that it will ask for input and you ask a question. If it is good than it should provide a decent ancer from the internet.
+The main file is question_ancerer.py. If you run that then you will have the program. The way it works is that it will ask for input and you ask a question. If the question is written correctly, then it should provide a decent ancer from the internet.
 
 This thing works by decoding the question into the subject, details, question word and secondary information. Then it looks for a wikipedia article on the topic and then searches that for the ancer.
 There are three types of questions that I have made it process. In the code I sort them and process it depending on the type.
