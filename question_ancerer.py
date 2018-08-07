@@ -36,7 +36,7 @@ def main(debug, question=None):
     text=get_text(url,subject,debug)
     if text!=None:
         #uses ancer finder to search the text and find the ancer
-        ancer=ancer_finder.get_ancer(details,type,text,second,debug)
+        ancer=ancer_finder.get_ancer(subject, details,type,text,second,debug)
         if subject!=details:
             print(subject+' was '+details+' : '+ancer)
         if subject==details:

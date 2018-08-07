@@ -1,7 +1,7 @@
 import english_terms
 import spacy
 
-def get_ancer(details, type, text,second,debug):
+def get_ancer(subject, details, type, text,second,debug):
     #this is the function that is actually called
     #defindes some things
     word_list=[]
@@ -47,7 +47,7 @@ def get_ancer(details, type, text,second,debug):
             word=sentence[i]
             details=str(details)
             if word.lower()==details.lower():
-                ancer=check_for_ancer(sentence, type, second, debug)
+                ancer=check_for_ancer(sentence, type, second, debug, subject)
                 if ancer!='':
                     return ancer
     return 'Sorry the question could not be ancered'
@@ -136,7 +136,7 @@ def who(details,ancer_text):
             return ent.text
     return ''
 
-def check_for_ancer(text,type,second,debug):
+def check_for_ancer(text,type,second,debug,subject):
     #this function is calles when there is a sentance that could have tha ancer.
 
     if debug==True:
@@ -166,6 +166,8 @@ def check_for_ancer(text,type,second,debug):
         if type!='':
             #type is called like a function for one of them above
             ancer=eval(type)(details,ancer_text)
+            if ancer==subject or ancer in english_terms.NOT_ANCER:
+                ancer=''
     return ancer
 
 if __name__=='__main__':
