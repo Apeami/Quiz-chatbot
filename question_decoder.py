@@ -42,7 +42,7 @@ def attr(ques,type):
         if token.dep_==u'nsubj' and token.text.lower() not in english_terms.QUESTION_WORDS and subject=='' and details=='':
             subject=token.text
             details=token.text
-        if token.text.lower() not in english_terms.QUESTION_WORDS and token.dep_==u'attr' and attr_second==True:
+        if token.text.lower() not in english_terms.QUESTION_WORDS and token.dep_==u'attr' and attr_second==False:
             second=token.text
         elif token.text.lower() not in english_terms.QUESTION_WORDS and token.dep_==u'nsubj' and attr_second==True:
             second=token.text
