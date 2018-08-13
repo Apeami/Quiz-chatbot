@@ -50,7 +50,7 @@ def get_ancer(subject, details, type, text,second,debug):
                 ancer=check_for_ancer(sentence, type, second, debug, subject)
                 if ancer!='':
                     return ancer
-    return 'Sorry the question could not be ancered'
+    return 'Sorry the question could not be answered'
 
 def what(details,ancer_text):
     #looks for a Noun
